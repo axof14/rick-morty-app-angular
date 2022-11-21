@@ -1,0 +1,9 @@
+<div *ngIf="!details.name">
+    <img src="https://lh3.googleusercontent.com/67EliQDqay8NmvkUvEpLaCsLNWmRVXCcmZ84QKggmEq_xreluvj2UNWlDRH6XvwhH3GNPzLYmEdXm8Fn5pmZqFoOTQuJvcFUySa38g=w600" alt="Warp loading animation">
+</div>
+<div *ngIf="details.name">
+<p>{{details.name}}</p>
+<img mat-card-md-image src="{{details.image}}" alt="{{details.name}}">
+<p>{{details.species}}</p>
+</div>
+       

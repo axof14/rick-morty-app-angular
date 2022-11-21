@@ -1,0 +1,15 @@
+
+
+<div class="card-container">
+    <mat-card *ngFor="let character of (list | filterCharacters:filter)">
+        <mat-card-content>
+            <mat-card-header>
+               <mat-card-title> {{character.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-md-image src="{{character.image}}" alt="{{character.name}}">
+            <mat-card-actions>
+                <button [routerLink]="['/list', character.id]" mat-raised-button>More details</button>
+            </mat-card-actions>
+        </mat-card-content>
+    </mat-card>
+</div>
