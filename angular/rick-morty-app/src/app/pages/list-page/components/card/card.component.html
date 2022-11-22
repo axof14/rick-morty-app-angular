@@ -4,7 +4,7 @@
 </mat-form-field>
 
 <div *ngIf="list && list.length > 0" class="card-container">
-    <mat-card *ngFor="let character of (list | filterCharacters:filter)">
+    <mat-card *ngFor="let character of (list | filterCharacters:filter | paginator: page )">
         <mat-card-content>
             <mat-card-header>
                <mat-card-title> {{character.name}}</mat-card-title>
@@ -15,4 +15,8 @@
             </mat-card-actions>
         </mat-card-content>
     </mat-card>
+</div>
+<div class="prev-next-container">
+    <button mat-raised-button (click)="prevPage()">Previous</button>
+    <button  mat-raised-button (click)="nextPage()">Next</button>
 </div>

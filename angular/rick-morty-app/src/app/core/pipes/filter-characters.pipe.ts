@@ -1,4 +1,3 @@
-import { ICharacter } from './../../pages/list-page/models/icharacters.interface';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({

@@ -1,3 +1,4 @@
+import { PaginatorPipe } from './pipes/paginator.pipe';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     FooterComponent,
     HeaderComponent,
-    FilterCharactersPipe
+    FilterCharactersPipe,
+    PaginatorPipe
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { FormsModule } from '@angular/forms';
   exports:[
     HeaderComponent,
     FooterComponent,
-    FilterCharactersPipe
+    FilterCharactersPipe,
+    PaginatorPipe
   ],
 })
 export class CoreModule { }
