@@ -7,12 +7,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterCharactersPipe implements PipeTransform {
 
   transform(list: any, filter: string = '') {
-    const lowerCaseFilter: string = filter.toLowerCase().trim();
+    const lowerCaseFilter: string = filter?.toLowerCase()?.trim();
 
     const filteredList: any = list.filter((el:any) => {
-      return el.toLowerCase().includes(lowerCaseFilter);
+      return el.name.toLowerCase().includes(lowerCaseFilter);
     });
 
-    return filteredList;
+    return filteredList
   }
 }

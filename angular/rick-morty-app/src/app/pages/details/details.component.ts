@@ -10,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
   // public details: IDetails[] = [] 
-  // error TS2339: Property 'name' does not exist on type IDetails[]
+
+  // Error TS2339: Property 'name' does not exist on type IDetails[]
   public details: any = []
 
 
@@ -25,8 +26,7 @@ export class DetailsComponent implements OnInit {
       res => {
         if(res){
           this.details = res
-          
-        }else{}
+        }
       },
       error =>(console.log('ERROR FETCHING DATA',error))
     )

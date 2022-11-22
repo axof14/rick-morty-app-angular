@@ -5,12 +5,9 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class CharacterService {
-  url = 'https://rickandmortyapi.com/api/character';
-  constructor(private _http: HttpClient) { 
-     
-  }
+  constructor(private http: HttpClient) { }
     
   getList():Observable<any>{
-    return this._http.get(this.url)
+    return this.http.get('https://rickandmortyapi.com/api/character')
   }
 }

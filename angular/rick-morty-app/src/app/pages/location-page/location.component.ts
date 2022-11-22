@@ -1,15 +1,15 @@
-import { LocationService } from './../../core/services/location.service';
+import { LocationService } from '../../core/services/location.service';
 import { Location } from './models/location';
 import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-  selector: 'app-task-page',
-  templateUrl: './task-page.component.html',
-  styleUrls: ['./task-page.component.scss'],
+  selector: 'app-location',
+  templateUrl: './location.component.html',
+  styleUrls: ['./location.component.scss'],
   providers:[LocationService]
 })
-export class TaskPageComponent implements OnInit {
+export class LocationComponent implements OnInit {
   public locations: Location[] = []
   // public list: any = []
   
@@ -30,15 +30,14 @@ export class TaskPageComponent implements OnInit {
   openToEdit(location:Location){
     this.selectedLocation = location
   }
-  constructor(private _locationService: LocationService) {}
+  constructor(private locationService: LocationService) {}
 
     ngOnInit(){
     
-      this._locationService.getLocations().subscribe(
+      this.locationService.getLocations().subscribe(
         res => {
           if(res){
             this.locations = res.results;
-            console.log(this.locations)
           }else{}
         },
         error =>(console.log(error))

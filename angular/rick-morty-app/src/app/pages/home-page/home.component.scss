@@ -1,0 +1,14 @@
+* {
+    text-align: justify;
+    font-size: 20px;
+
+}
+.text-box-container{
+    display:block;
+}
+@media screen and (min-width: 800px) {
+    .text-box-container{
+        display:grid;
+        grid-template-columns:  1fr 1fr;
+    }
+}

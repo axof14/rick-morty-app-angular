@@ -1,0 +1,31 @@
+
+
+<div class="dialog-container" *ngIf="selectedLocation.id !== 0" >
+    <mat-form-field color="accent" appearance="fill">
+        <mat-label>Location Name</mat-label>
+        <input matInput type="text" [(ngModel)]="selectedLocation.name">
+    </mat-form-field>
+    <br>
+    <mat-form-field color="accent" appearance="fill">
+        <mat-label>Location type</mat-label>
+        <input matInput type="text" [(ngModel)]="selectedLocation.type">
+    </mat-form-field>
+    <br>
+    <div>
+        <button mat-button color="accent" (click)="addOrEdit()" >Submit</button>
+        <button mat-button color="accent" (click)="delete()" *ngIf="selectedLocation.id !== 0">Delete</button>
+    </div>
+</div>
+    
+    <div class="location-container">
+        <mat-selection-list #location *ngFor="let location of locations" [multiple]="false">
+            <mat-list-option [value]="location"
+                (click)="openToEdit(location)"
+            >
+            <p class="planet-name"><strong>{{location.name}}</strong><p> 
+            <p>{{location.type}}</p>
+            
+            </mat-list-option>
+        </mat-selection-list>
+    </div>
+    

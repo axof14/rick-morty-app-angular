@@ -1,3 +1,4 @@
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { CoreModule } from './../../core/core.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -6,13 +7,11 @@ import { ListRoutingModule } from './list-routing.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
-
-
-
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
-    CardComponent
+    CardComponent,
   ],
   imports: [
     CommonModule,
@@ -20,11 +19,13 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatButtonModule,
     CoreModule,
-    FormsModule
-
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports:[
-    CardComponent
+    CardComponent,
+    
   ]
 })
 export class ListModule { }

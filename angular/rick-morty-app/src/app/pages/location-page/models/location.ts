@@ -1,5 +1,5 @@
 export class Location{
-    id: any = 0 ;
+    id: number = 0 ;
     name: any ;
     type: any 
 }

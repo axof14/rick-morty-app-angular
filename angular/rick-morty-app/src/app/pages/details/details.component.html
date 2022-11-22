@@ -1,9 +1,13 @@
-<div *ngIf="!details.name">
+<!-- <div *ngIf="!details" >
     <img src="https://lh3.googleusercontent.com/67EliQDqay8NmvkUvEpLaCsLNWmRVXCcmZ84QKggmEq_xreluvj2UNWlDRH6XvwhH3GNPzLYmEdXm8Fn5pmZqFoOTQuJvcFUySa38g=w600" alt="Warp loading animation">
+</div> -->
+<div class="details-container">
+<mat-card>
+    
+    <mat-card-header>
+        <h1>{{details.name}} <span>{{details.gender === 'Male' ? '♂️' : '♀️'}}</span></h1>
+    </mat-card-header>
+    <app-avatar [details]="details"></app-avatar>
+        <app-info [details]="details"></app-info>
+</mat-card>
 </div>
-<div *ngIf="details.name">
-<p>{{details.name}}</p>
-<img mat-card-md-image src="{{details.image}}" alt="{{details.name}}">
-<p>{{details.species}}</p>
-</div>
-       

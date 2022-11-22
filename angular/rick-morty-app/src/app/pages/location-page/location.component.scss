@@ -1,0 +1,26 @@
+
+mat-selection-list{
+  font-size: large;
+}
+
+::ng-deep.mat-pseudo-checkbox{
+    display: none !important;
+}
+
+input{
+  margin:5px;
+}
+
+.dialog-container{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  margin:10px;
+
+  border:solid white 1px;
+  border-radius: 10px;
+}
+.planet-name{
+  font-size: 30px;
+}

@@ -1,0 +1,21 @@
+.banner-container{
+    display:flex;
+    width:100%;
+    background-image: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2019/05/rick-morty-temporada-4-llegara-noviembre.jpg?h=0046539c&itok=3V9Cx3aQ');
+    background-position: center;
+    height:34rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align:center; 
+};
+h1{
+    font-size: 5rem;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+.welcome-message{
+    text-shadow: 2px 2px black;
+}

@@ -19,8 +19,8 @@ const routes: Routes = [
 
   },
   {
-    path: `task`,
-    loadChildren: () => import('./pages/task-page/task.module').then(m => m.TaskModule)
+    path: `location`,
+    loadChildren: () => import('./pages/location-page/location.module').then(m => m.LocationModule)
 
   },
   { 

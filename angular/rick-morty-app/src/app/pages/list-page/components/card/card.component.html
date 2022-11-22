@@ -1,6 +1,9 @@
+<mat-form-field color="accent" appearance="fill">
+    <mat-label>search for a name</mat-label>
+    <input matInput type="text" [(ngModel)]="filter" />
+</mat-form-field>
 
-
-<div class="card-container">
+<div *ngIf="list && list.length > 0" class="card-container">
     <mat-card *ngFor="let character of (list | filterCharacters:filter)">
         <mat-card-content>
             <mat-card-header>

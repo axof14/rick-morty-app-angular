@@ -1,6 +1,6 @@
-import { ReactiveFormsModule } from '@angular/forms';
-import { TaskPageComponent } from './pages/task-page/task-page.component';
-import { TaskModule } from './pages/task-page/task.module';
+import { MatInputModule } from '@angular/material/input';
+import { LocationComponent } from './pages/location-page/location.component';
+import { LocationModule } from './pages/location-page/location.module';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { ListModule } from './pages/list-page/list.module';
@@ -18,7 +18,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { DetailsComponent } from './pages/details/details.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import {FormsModule} from '@angular/forms'
+import { FormsModule } from '@angular/forms'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material';
+import { AvatarComponent } from './pages/details/components/avatar/avatar.component';
+import { InfoComponent } from './pages/details/components/info/info.component';
+
 
 
 
@@ -31,7 +36,9 @@ import {FormsModule} from '@angular/forms'
     ListComponent,
     DetailsComponent,
     NotFoundComponent,
-    TaskPageComponent
+    LocationComponent,
+    AvatarComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,11 +49,15 @@ import {FormsModule} from '@angular/forms'
     MatCardModule,
     CoreModule,
     HomeModule,
-    ListModule,
     MatSelectModule,
     MatListModule,
-    TaskModule,
-    FormsModule
+    LocationModule,
+    FormsModule,
+    MatFormFieldModule,
+    LocationModule,
+    MatInputModule,
+    MatIconModule,
+    ListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

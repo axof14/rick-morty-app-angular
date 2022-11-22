@@ -4,4 +4,5 @@ export interface IDetails {
     image: string
     species: string,
     status:string,
+    gender:string;
 }

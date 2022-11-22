@@ -1,4 +1,4 @@
-import { CharacterService } from './../../core/services/character.service';
+import { CharacterService } from './services/character.service';
 import { DetailsComponent } from './../details/details.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';

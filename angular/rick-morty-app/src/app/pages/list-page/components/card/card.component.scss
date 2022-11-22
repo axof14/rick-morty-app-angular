@@ -9,8 +9,12 @@ mat-card{
     margin:5px;
     height: 250px
 }
+mat-card:hover {
+    transform: scale(1.05); 
+}
 mat-card-header{
     text-justify: center;
+    height:60px;
 }
 mat-card-content{
     display: flex;
@@ -18,9 +22,19 @@ mat-card-content{
     align-items: center;
 
 }
-
+mat-card-title{
+    text-align: center;
+}
 img{
-    
     border-radius: 50%
-    
+}
+mat-form-field{
+    display:flex;
+    justify-content: center;
+    margin-top:10px;
+    width:100%;
+}
+
+mat-card-actions{
+    margin-top: 10px;
 }
