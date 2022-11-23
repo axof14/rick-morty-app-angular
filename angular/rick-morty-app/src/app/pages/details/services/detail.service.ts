@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 
-export class DetailsService {
-  public url = `https://rickandmortyapi.com/api/character/`;
+export class DetailService {
+  public url = 'https://rickandmortyapi.com/api/character/';
   public id? :number;
   constructor(
-    private _http: HttpClient,
+    private http: HttpClient,
     private route: ActivatedRoute
     ) { }
     
@@ -18,6 +18,6 @@ export class DetailsService {
     this.route.params.subscribe((param) => {
       this.id = param['id'];
     })
-    return this._http.get(this.url+this.id)
+    return this.http.get(this.url+this.id)
   }
 }

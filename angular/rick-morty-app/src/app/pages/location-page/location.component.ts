@@ -1,4 +1,4 @@
-import { LocationService } from '../../core/services/location.service';
+import { LocationService } from './services/location.service';
 import { Location } from './models/location';
 import { Component, OnInit } from '@angular/core';
 

@@ -5,12 +5,9 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class LocationService {
-  url = 'https://rickandmortyapi.com/api/location';
-  constructor(private _http: HttpClient) { 
-     
-  }
+  constructor(private http: HttpClient) { }
     
   getLocations():Observable<any>{
-    return this._http.get(this.url)
+    return this.http.get('https://rickandmortyapi.com/api/location')
   }
 }

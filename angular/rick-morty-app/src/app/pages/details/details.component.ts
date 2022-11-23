@@ -1,12 +1,12 @@
 import { IDetails } from './models/idetails.interface';
-import { DetailsService } from './../../core/services/details.service';
+import { DetailService } from './services/detail.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.scss'],
-  providers: [DetailsService]
+  providers: [DetailService]
 })
 export class DetailsComponent implements OnInit {
   // public details: IDetails[] = [] 
@@ -16,13 +16,13 @@ export class DetailsComponent implements OnInit {
 
 
   constructor(
-    private _detailsService: DetailsService,
+    private detailService: DetailService,
 
   ) { }
 
   ngOnInit(){
    
-    this._detailsService.getDetails().subscribe(
+    this.detailService.getDetails().subscribe(
       res => {
         if(res){
           this.details = res

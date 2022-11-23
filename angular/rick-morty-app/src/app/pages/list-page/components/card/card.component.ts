@@ -12,7 +12,6 @@ import { ICharacter } from '../../models/icharacters.interface';
 export class CardComponent implements OnInit {
   
   public list: ICharacter[] = []
-  // public list: any = []
   public page:number = 0;
   public filter = '';
 
@@ -34,7 +33,6 @@ export class CardComponent implements OnInit {
 
   }
   nextPage(){
-    
     if(this.page == 15){
     return} else if(this.page >= 0){this.page +=5}
   }
